@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: azure;
+
+    color: rgb(26, 24, 24);
+    line-height: 1.6;
+}
+
+.container {
+    /* border: 1px solid rgb(26, 11, 244);
+    padding: 15px;
+    margin: 15px; */
+}
+
+/* ==============================
+       Header Section
+================================*/
+.site-header {
+    /* border: 1px solid red;
+    padding: 15px;
+    margin: 15px; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(110deg, rgb(17, 67, 129),rgb(10, 10, 118));
+
+    padding: 8px 20px;
+}
+
+.brand {
+    /* border: 1px solid rgb(23, 175, 6);
+    padding: 15px;
+    margin: 15px; */
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    color: white;
+}
+
+.brand-logo {
+    
+    background-color: white;
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-text h2 {
+    font-size: 24px;
+}
+
+.brand-text p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* navbar */
+.main-nav {
+    /* border: 1px solid rgb(23, 175, 6);
+    padding: 15px;
+    margin: 15px; */
+
+}
+
+.nav-list {
+    list-style-type: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-list a {
+    color: aliceblue;
+    text-decoration: none;
+
+    padding: 8px 15px;
+    border-radius: 8px;
+
+    transition: 0.8s;
+}
+
+.nav-list a:hover {
+    background-color: rgba(240, 248, 255, 0.301);
+}
+
+/* ==============================
+       Main Section
+================================*/
+.main-layout {
+    /* border: 1px solid red;
+    padding: 15px;
+    margin: 15px; */
+
+    display: grid;
+    grid-template-columns: 1fr 390px;
+    /* grid-template-columns: 80% 20%; */
+
+    padding: 20px 22px;
+}
+
+/* left content */
+.left-content {
+    /* border: 1px solid rgba(249, 170, 1, 0.663);
+    padding: 15px;
+    margin: 15px; */
+}
+
+.hero {
+    /* border: 1px solid rgba(6, 211, 37, 0.663);
+    padding: 15px;
+    margin: 15px; */
+
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+
+    background: linear-gradient(90deg, white ,rgb(25, 95, 186));
+    
+    padding: 26px 36px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px black;
+
+    
+    align-items: center;
+    
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    color: rgb(39, 83, 125);
+    line-height: 1.8;
+}
+
+.hero-text p {
+    font-size: 22px;
+    color: rgb(56, 123, 185);
+    font-weight: 600;
+}
+
+.hero-photo img {
+    width: 400px;
+    height: 200px;
+    border: 5px solid rgb(21, 94, 196);
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px black;
+
+    object-fit: cover;
+
+
+        /*
+    object-fit: contain ➡️เห็นภาพครบ รักษาสัดส่วน (อาจมีขอบว่าง)
+    object-fit: fill ➡️ยืดภาพให้เต็มกล่อง ภาพอาจบิด (สัดส่วนเพี้ยน)
+    object-fit: cover ➡️ครอปภาพให้เต็มกล่อง รักษาสัดส่วน บางส่วนของภาพจะถูกตัดออก
+    */
+}
+
+
+.card {
+    border: 1px solid rgba(6, 211, 37, 0.663);
+    padding: 15px;
+    margin: 15px;
+}
+
+/* right sidbar */
+.right-sidebar {
+    border: 1px solid rgba(249, 170, 1, 0.663);
+    padding: 15px;
+    margin: 15px;
+}
+
+.side-card {}
+
+.submit-card {}
+
+
+/* ==============================
+       Footer Section
+================================*/
+.tip-box {
+    border: 1px solid red;
+    padding: 15px;
+    margin: 15px;
+}

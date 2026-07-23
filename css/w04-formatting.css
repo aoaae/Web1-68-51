@@ -12,8 +12,8 @@ body {
 }
 
 footer,
-.hero,
-.card,
+/* .hero, */
+/* .card, */
 .tip-box {
     border: 1px solid #ff0000;
     background-color: #fff;
@@ -21,6 +21,9 @@ footer,
     padding: 20px;
 }
 
+/* ================================
+              Header
+=================================== */
 header {
     background: linear-gradient(to right, #0036aa, #325bfc);
     padding: 20px;
@@ -41,7 +44,7 @@ header {
 .brand-icon { font-size: 50px; }
 .brand-text p { font-size: 14px}
 
-
+/* navigation */
 nav a {
     color: white;
     text-decoration: none;
@@ -53,22 +56,159 @@ nav a:hover {
 }
 
 
+/* hero section */
+.hero {
+    display: flex;
+    gap: 10px;
+
+    padding: 40px;
+}
+
+.hero-icon {
+    background-color: #325bfc;
+    color: #fff;
+    border-radius: 15px;
+
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    
+
+}
+
+.hero-text {}
+
+.hero-text h1 {
+    font-size: 40px;
+    color: #1a2d78;
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #474748;
+}
 
 
+/* Main content */
 
 .container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
 
-    background-color: #b5fd76;
+    /* background-color: #b5fd76; */
 }
 
 
 .card-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 
-    background-color: #fffb2c;
+    /* background-color: #fffb2c; */
+}
+
+.card {
+    background-color: #fff;
+
+    border-radius: 16px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.11);
+    border: 1px solid rgb(127, 134, 205);
+
+    overflow: hidden;
+
+    /* padding: 20px; */
+}
+
+.card-header {
+    background-color: #edf2f7;
+
+    color: blue;
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 20px;
+    border-bottom: 1px solid rgb(127, 134, 205);;
+}
+
+.card-header-icon {
+    background-color: #325bfc;
+    color: white;
+
+    /* padding: 10px; */
+    border-radius: 50%;
+
+    width: 38px;
+    height: 38px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.format-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+
+    gap: 20px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #d1e0e8;
+    padding: 6px 0;
+}
+
+.label {
+    /* padding: 8px 50px; */
+
+    border-radius: 8px;
+    
+
+    color: white;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.b-label { background-color: #1100ff; }
+.strong-label { background-color: #00ff0d; }
+.i-label { background: #10b981; }
+.em-label { background: #22c55e; }
+.u-label { background: #f59e0b; }
+.mark-label { background: #f59e0b; }
+.small-label { background: #8b5cf6; }
+.del-label { background: #ef4444; }
+.sup-label { background: #7c3aed; }
+.sub-label { background: #3b82f6; }
+
+
+/* card 2 */
+
+.pre-box {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+
+    padding: 20px;
+}
+
+.html-tag {
+    color: #f5207c;
+}
+
+.line-no {
+    color: #00ff0d;
+    display: inline-block;
+    width: 20px;
 }
