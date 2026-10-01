@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* font-size: 16px; */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+
+    background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 50%, #fae8ff 100%);
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+:root {
+    /* สีหลักของเว็บ */
+    --primary-color: rgb(35, 90, 218);
+    --promary-dark-color: rgb(14, 66, 188);
+    --secondary-color:rgb(158, 15, 158);
+
+    /* สีข้อความ */
+    --text-color: #263238;
+    --muted-text-color: #6b7280;
+
+    --nav-text-color: #374151;
+
+    --light-text-color: #ffffff; 
+
+    /* สีพื้น */
+    --btn-bg-color: rgb(168, 41, 168);
+    --footer-bg-color: black;
+
+    /* เงา */
+    --header-shadow: 0 4px 8px rgba(15, 23, 42, 0.08); 
+    --card-shadow: 0 3px 10px rgba(15, 24, 46, 0.259); 
+
+    /* สีขอบ */
+    --border-color: #e5e7eb;
+
+    /* สีของ Information cards */
+    --info-blue-background: #dbeafe;
+    --info-blue-heading: #1e3a8a;
+    --info-purple-background: #f3e8ff;
+    --info-purple-heading: #581c87;
+    --info-green-background: #d1fae5;
+    --info-green-heading: #064e3b;
+    --info-orange-background: #ffedd5;
+    --info-orange-heading: #9a3412;
+
+}
+
+/* ========================
+         Header
+===========================*/
+.header {
+    box-shadow: var(--header-shadow);
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    background-color: rgba(250, 239, 136, 0.667);
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    text-align: center;
+    padding-block: 1.5rem;
+
+    /* padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    padding :1.5rem 5px; */
+}
+
+
+.header-title {
+    color: var(--primary-color);
+
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    line-height: 1.2;
+    margin-bottom: 0.25rem;   
+  
+}
+
+.header-subtitle {
+    color: var(--muted-text-color);
+}
+
+
+
+
+/* ========================
+         Nav
+===========================*/
+nav {
+    padding-block: 2rem;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+
+    padding: 0.65rem 1.2rem;
+    box-shadow: var(--card-shadow);
+    border-radius: 999px;
+
+    margin-right: 0.3rem;
+
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+nav a:hover {
+    transform: translateY(-10px);
+}
+
+nav a.active {
+    background-color: var(--btn-bg-color);
+    color: var(--light-text-color);
+}
+
+
+/* ========================
+         Main
+===========================*/
+.page-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.pet-card {
+    border: var(--border-color);
+    box-shadow: var(--card-shadow);
+    border-radius: 0.75rem;
+
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.5;
+}
+
+.pet-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--header-shadow);
+}
+
+.pet-card img {
+    height: 16.25rem;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+.pet-content {
+    padding: 1.25rem;
+}
+
+.pet-content h2 {
+    color: var(--promary-dark-color);
+}
+
+.breed {
+    color: var(--muted-text-color);
+}
+
+
+
+/* ========================
+         Info
+===========================*/
+
+.info-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--content-background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    box-shadow: var(--card-shadow);
+}
+
+.info-title {
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 1.9rem);
+    margin-bottom: 1.5rem;
+}
+
+/* 
+ใช้สร้างคอลัมน์ซ้ำโดยไม่ต้องกำหนดจำนวนตายตัว 
+ให้เบราว์เซอร์คำนวณจำนวนคอลัมน์ที่ใส่ได้เอง
+
+*/
+.info-grid {
+    display: grid;
+
+    /* grid-template-columns: repeat(auto-fit, minmax(15.62rem, 1fr)); */
+    /* แบบนี้ถ้าจอเล็กกว่า 15.62 กล่องจะล้นการ์ดออกมา */
+
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15.62rem), 1fr));
+    gap: 1.25rem;
+}
+
+.info-card {
+    padding: 1.25rem;
+    border-radius: 0.7rem;
+}
+
+.info-card h3 {
+    margin-bottom: 0.55rem;
+    font-size: 1.1rem;
+}
+
+.info-card p {
+    color: var(--text-color);
+    font-size: 0.94rem;
+}
+
+.info-blue { background: var(--info-blue-background);}
+.info-blue h3 { color: var(--info-blue-heading);}
+
+.info-purple { background: var(--info-purple-background);}
+.info-purple h3 { color: var(--info-purple-heading);}
+
+.info-green { background: var(--info-green-background);}
+.info-green h3 { color: var(--info-green-heading);}
+
+.info-orange { background: var(--info-orange-background);}
+.info-orange h3 { color: var(--info-orange-heading);}
+
+
+/* ========================
+         Footer
+===========================*/
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--light-text-color);
+
+    text-align: center;
+    padding-block: 2rem;
+
+    margin-top: 2rem;
+}
+
+
+/* ========================
+         Responsive
+===========================*/
